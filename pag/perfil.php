@@ -7,6 +7,8 @@
 
     $userId = $_SESSION['id_users'];
 
+    $imagePath = $_SERVER['DOCUMENT_ROOT'] . '/imagenes/gslogo.png';
+
     function moneyFormat($number, $fractional = false) {
         $decimals = $fractional ? 2 : 0;  
         return number_format($number, $decimals, ',', '.'); 
@@ -26,7 +28,6 @@
         'dinero' => 686,
         'banco' => 0
     ];
-    
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -38,166 +39,241 @@
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 	</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-color">
-		<div class="container-fluid">
-			<!-- Icono a la izquierda -->
-			<a class="navbar-brand" href="#">
-				<img src="../imagenes/gslogo.png" alt="Icono" width="70" height="70" class="d-inline-block align-text-top" style="margin-left: 0.5em;">
-				Golden State Roleplay
-			</a>
-
-			<!-- Botón para colapsar en dispositivos móviles -->
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<!-- Contenedor del navbar -->
-			<div class="collapse navbar-collapse " id="navbarNav">
-				<!-- Items centrados -->
-				<ul class="navbar-nav mx-auto gap-5">
-					<li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Tienda</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Foro</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Discord</a></li>
-				</ul>
-
-				<!-- Elementos a la derecha -->
-				<div class="d-flex ms-auto align-items-center">
-					<?php if(empty($username)): ?>
-						<a href="inc/login.php" class="btn logIn-btn text-white me-3">Iniciar sesión</a>
-					<?php else: ?>
-						<!-- Dropdown alineado a la derecha -->
-						<li class="dropdown nav-link" style="padding-right: 2em; padding-top: 0.5em;">
-							<a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								Menú
-							</a>
-							<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-								<li><a class="dropdown-item" href="pag/perfil.php">Perfil</a></li>
-								<li><a class="dropdown-item" href="#">Salir</a></li>
-								<li><hr class="dropdown-divider"></li>
-							</ul>
-						</li>
-					<?php endif ?>
-				</div>
-			</div>
-		</div>
-	</nav>
+    <?php    include_once 'navbar.php'; ?>
     <div class="container-fluid text-center">
-        <div class="row">
-            <div class="col-2">
+        <div class="row m-0">
+            <div class="col-lg-2 col-sm-12">
                 <div class="border mt-3">
                     <div>
-                        <h5 class="text-center text-black">Shakewell Outlawz</h5>
-                        <hr class="text-secondary">
+                        <h5 class="text-center border text-black m-0 p-1">Shakewell Outlawz</h5>
                         <img src="../imagenes/skins/2.png" alt="Avatar" class="profile-img">
                     </div>
-                    <div class="menu-item">
-                        <i class="fas fa-cog"></i>
-                        <a href="#" class="text-black text-decoration-none">Configuración de cuenta</a>
+                </div>
+                <div class="btn w-100 border mt-2">
+                    <i class="fa-solid fa-gear"></i>
+                    <a href="#" class="text-black text-decoration-none">Configuración de cuenta</a>
+                </div>
+                <div class="btn w-100 border mt-2">
+                    <i class="fas fa-trophy"></i>
+                    <a href="#" class="text-black text-decoration-none">Resumen y logros</a>
+                </div>
+                <div class="card-money">
+                    <span class="text-black">💰 Moneda GS</span>
+                    <span class="badge bg-warning">3000</span>
+                </div>
+                <div class="card-money">
+                    <span class="text-black">💵 Dinero</span>
+                    <span class="badge bg-success">$686</span>
+                </div>
+                <div class="card-money">
+                    <span class="text-black">🏦 Banco</span>
+                    <span class="badge bg-primary">$0</span>
+                </div>
+            </div>
+            <div class="col-lg-10 col-sm-12 mt-3">
+                <div class="row">
+                    <div class="col-sm-12 pb-2">
+                        <div class="card">
+                            <a class="btn" href="">Información</a>
+                        </div>
                     </div>
-                    <div class="menu-item">
-                        <i class="fas fa-trophy"></i>
-                        <a href="#" class="text-black text-decoration-none">Resumen y logros</a>
+                    <div class="col-sm-12 pb-2">
+                        <div class="card">
+                            <a class="btn" href="">Vehiculos</a>
+                        </div>
                     </div>
-                    <div class="card-money">
-                        <span class="text-black">💰 Moneda GS</span>
-                        <span class="text-warning">3000</span>
+                    <div class="col-sm-12 pb-2">
+                        <div class="card">
+                            <a class="btn" href="">Información</a>
+                        </div>        
                     </div>
-                    <div class="card-money">
-                        <span class="text-black">💵 Dinero</span>
-                        <span class="badge bg-success">$686</span>
-                    </div>
-                    <div class="card-money">
-                        <span class="text-black">🏦 Banco</span>
-                        <span class="badge bg-primary">$0</span>
+                    <div class="col-sm-12 pb-2">
+                        <div class="card">
+                            <a class="btn" href="">Información</a>
+                        </div>        
                     </div>
                 </div>
             </div>
-            <div class="col-10 mt-3">
-                <div class="row">
-                    <div class="col-3">
-                        <div class="card">
-                            <a class="btn btn-primary" href="">Información</a>
+            <div class="row mt-3 p-0 ps-4">
+                    <h3 class="mb-3 col-sm-12">Información de tu cuenta</h3>
+                    <div class="col-lg-6 col-sm-12 p-0">
+                        <div class="d-flex flex-column">
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td class=" p-0 d-flex justify-content-between text-center">
+                                            <p class="m-0 p-1">🪪 Nombre:</p>
+                                            <p class="m-0 p-1 pe-2"><strong><?php echo $usuario['nombre']; ?></strong></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=" p-0 d-flex justify-content-between text-center">
+                                            <p class="m-0 p-1" >📅 Edad:</p>
+                                            <p class="m-0 p-1 pe-2"><strong><?php echo $usuario['edad']; ?> años</strong></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=" p-0 d-flex justify-content-between text-center">
+                                            <p class="m-0 p-1">⭐ Nivel:</p>
+                                            <p class="m-0 p-1 pe-2"><strong><?php echo $usuario['nivel']; ?></strong></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=" p-0 d-flex justify-content-between text-center">
+                                            <p class="m-0 p-1">📈 Experiencia:</p>
+                                            <p class="m-0 p-1 pe-2"><strong><?php echo $usuario['nivel']; ?></strong></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=" p-0 d-flex justify-content-between text-center">
+                                            <p class="m-0 p-1">⚠️ Sanciones:</p>
+                                            <p class="m-0 p-1 pe-2"><strong><?php echo $usuario['sanciones']; ?></strong></p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="card">
-                            <a class="btn btn-primary" href="">Vehiculos</a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card">
-                            <a class="btn btn-primary" href="">Información</a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card">
-                            <a class="btn btn-primary" href="">Información</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <h3>Información de tu cuenta</h3>
-                    <div class="col-6 ">
-                    <div class="d-flex flex-column">
+                    <div class="col-lg-6 col-sm-12 p-0">
                         <table class="table table-bordered">
                             <tbody>
-                                <tr >
-                                    <div class="d-flex justify-content-between text-center border">
-                                        <p>📌 Nombre:</p>
-                                        <p class="pe-2 pt-2"><strong><?php echo $usuario['nombre']; ?></strong></p>
-                                    </div>
-                                    <td >
-                                        
+                                <tr>
+                                    <td class=" p-0 d-flex justify-content-between text-center">
+                                        <p class="m-0 p-1">🕒 Ultima conexión:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>1</strong></p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <div class="d-flex justify-content-between">
-                                            <p>📅 Edad:</p>
-                                            <p class="pe-2"><strong><?php echo $usuario['edad']; ?> años</strong></p>
-                                        </div>
+                                    <td class=" p-0 d-flex justify-content-between text-center">
+                                        <p class="m-0 p-1">📱 Teléfono:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>1</strong></p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <div class="d-flex justify-content-between">
-                                            <p>🎖 Nivel:</p>
-                                            <p class="pe-2"><strong><?php echo $usuario['nivel']; ?></strong></p>
-                                        </div>
+                                    <td class=" p-0 d-flex justify-content-between text-center">
+                                        <p class="m-0 p-1">❤️ Salud:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>1</strong></p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <div class="d-flex justify-content-between">
-                                            <p>⚠️ Sanciones:</p>
-                                            <p class="pe-2"><strong><?php echo $usuario['sanciones']; ?></strong></p>
-                                        </div>
+                                    <td class=" p-0 d-flex justify-content-between text-center">
+                                        <p class="m-0 p-1">🛡️ Chaleco:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>1</strong></p>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
-                        
-                        
-                        
-                        
-                        
-                    </div>
-                    </div>
-                    <div class="col-6 border">
-                        <div class="d-flex flex-column">
-                            <p>🏅 Logros: <strong>Logros</strong></p>
-                            <p>🎯 Objetivos: <strong>Objetivos</strong></p>
-                            <p>💼 Puesto: <strong>Puesto</strong></p>
-                            <p>🌍 Ubicación: <strong>Ubicación</strong></p>
-                            <p>📧 Correo: <strong>Correo</strong></p>
-                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="row mt-3 p-0 ">
+                <h3 class="mb-3 col-sm-12">Inventario</h3>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="d-flex flex-column">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td class=" p-0 d-flex justify-content-between text-center">
+                                        <p class="m-0 p-1">💊 Medicamentos:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" p-0 d-flex justify-content-between text-center">
+                                        <p class="m-0 p-1">🌿 Marihuana:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" p-0 d-flex justify-content-between text-center">
+                                        <p class="m-0 p-1">⚙️ Piezas:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" p-0 d-flex justify-content-between text-center">
+                                        <p class="m-0 p-1">📦 Materiales:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" p-0 d-flex justify-content-between text-center">
+                                        <p class="m-0 p-1">💉 Botiquines:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" p-0 d-flex justify-content-between text-center">
+                                        <p class="m-0 p-1">🌱 Semillas:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" p-0 d-flex justify-content-between text-center">
+                                        <p class="m-0 p-1">🎙️ Radio:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" p-0 d-flex justify-content-between text-center">
+                                        <p class="m-0 p-1">🪛 Destornillador:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="d-flex flex-column">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td class=" p-0 d-flex justify-content-between text-center">
+                                        <p class="m-0 p-1"><img src="..\imagenes\iconos\armas\Weapon-4.gif" alt=""> Arma blanca:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" p-0 d-flex justify-content-between text-center">
+                                        <p class="m-0 p-1"><img src="..\imagenes\iconos\armas\Weapon-24.gif" alt=""> Pistola:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" p-0 d-flex justify-content-between text-center">
+                                        <p class="m-0 p-1"><img src="..\imagenes\iconos\armas\Weapon-27.gif" alt=""> Escopeta:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" p-0 d-flex justify-content-between text-center">
+                                        <p class="m-0 p-1"><img src="..\imagenes\iconos\armas\Weapon-29.gif" alt=""> Subfusil:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" p-0 d-flex justify-content-between text-center">
+                                        <p class="m-0 p-1"><img src="..\imagenes\iconos\armas\Weapon-31.gif" alt=""> Fusil de asalto:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" p-0 d-flex justify-content-between text-center">
+                                        <p class="m-0 p-1"><img src="..\imagenes\iconos\armas\Weapon-33.gif" alt=""> Rifle:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -246,7 +322,9 @@
                     </div>
         
     </div> -->
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 
 

@@ -2,7 +2,7 @@
     <div class="row w-100 m-0 d-flex align-items-center position-relative">
         <!-- Icono en pantallas grandes -->
         <div class="col-lg-3 d-none d-lg-flex align-items-center">
-            <a href="#"><img src="imagenes/gslogo.png" alt="" class="nav-icon img-fluid"></a>
+            <a href="#"><img src="../imagenes/gslogo.png" alt="" class="nav-icon img-fluid"></a>
         </div>
         
         <!-- Botón para el menú en dispositivos móviles -->
@@ -14,7 +14,7 @@
         <div class="offcanvas offcanvas-start d-lg-none navbar-color" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="mobileMenuLabel">
-                    <a href="#"><img src="imagenes/gslogo.png" alt="" class="nav-icon img-fluid"></a>
+                    <a href="#"><img src="../imagenes/gslogo.png" alt="" class="nav-icon img-fluid"></a>
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
