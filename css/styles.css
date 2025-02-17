@@ -1,0 +1,127 @@
+*{
+    @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+    font-family: 'Figtree', sans-serif;
+}
+
+
+
+.navbar-color{
+    background: black !important;
+}
+
+
+
+.nav-link{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 5px;
+
+}
+
+.nav-link::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3 ease;
+}
+
+.nav-link:hover::after{
+    width: 100%;
+}
+.nav-link:hover{
+    color: orange;
+}
+
+.nav-link a:hover{
+    color: orange;
+}
+
+.logIn-btn{
+    background: #fba723;
+    border-radius: 18px;
+    padding: 0.5em 0.8em;
+}
+
+.logIn-btn:hover{
+    background: #fba723;
+    box-shadow: orange 0px 0px 7px;    
+    
+}
+
+.dropdown-menu{
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-item{
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover{
+    background-color: #f8f9fa;
+}
+
+body a{
+    text-decoration: none;
+    color: white;
+}
+
+body ul{
+    list-style: none;
+}
+
+.container-foto-usuario{
+    margin: 1.5em 2em 0em 2em;
+}
+
+.sidebar {
+    width: 250px;
+    /* background-color: #152238; */
+    margin-left: 1.5em;
+    color: white;
+    padding: 15px;
+    box-shadow: gray 0 0px 6px;
+    /* border-radius: 10px; */
+}
+.profile-img {
+    width: 100%;
+    border-radius: 10px;
+}
+.menu-item {
+    /* background: #1E2A40; */
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+.menu-item i {
+    margin-right: 10px;
+}
+.card-money {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    background: #F8F9FA;
+    margin-top: 5px;
+}
+
+.information-section{
+    margin: 1.5em 2em 0em 2em;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
