@@ -1,48 +1,45 @@
-    
-    
-    
-    
-    <nav class="navbar navbar-expand-lg navbar-color">
-		<div class="container-fluid">
-			<!-- Icono a la izquierda -->
-			<a class="navbar-brand" href="#">
-				<img src="imagenes/gslogo.png" alt="Icono" width="70" height="70" class="d-inline-block align-text-top" style="margin-left: 0.5em;">
-				Golden State Roleplay
-			</a>
-
-			<!-- Botón para colapsar en dispositivos móviles -->
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<!-- Contenedor del navbar -->
-			<div class="collapse navbar-collapse " id="navbarNav">
-				<!-- Items centrados -->
-				<ul class="navbar-nav mx-auto gap-5">
-					<li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Tienda</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Foro</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Discord</a></li>
-				</ul>
-
-				<!-- Elementos a la derecha -->
-				<div class="d-flex ms-auto align-items-center">
-					<?php if(empty($username)): ?>
-						<a href="inc/login.php" class="btn logIn-btn text-white me-3">Iniciar sesión</a>
-					<?php else: ?>
-						<!-- Dropdown alineado a la derecha -->
-						<li class="dropdown nav-link" style="padding-right: 2em; padding-top: 0.5em;">
-							<a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								Menú
-							</a>
-							<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-								<li><a class="dropdown-item" href="pag/perfil.php">Perfil</a></li>
-								<li><a class="dropdown-item" href="#">Salir</a></li>
-								<li><hr class="dropdown-divider"></li>
-							</ul>
-						</li>
-					<?php endif ?>
-				</div>
-			</div>
-		</div>
-	</nav>
+<nav class="navbar navbar-expand-lg container-fluid p-0 navbar-color">
+    <div class="row w-100 m-0 d-flex align-items-center position-relative">
+        <!-- Icono en pantallas grandes -->
+        <div class="col-lg-3 d-none d-lg-flex align-items-center">
+            <a href="#"><img src="imagenes/gslogo.png" alt="" class="nav-icon img-fluid"></a>
+        </div>
+        
+        <!-- Botón para el menú en dispositivos móviles -->
+        <button class="navbar-toggler d-lg-none ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Menú desplegable lateral para móviles -->
+        <div class="offcanvas offcanvas-start d-lg-none navbar-color" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="mobileMenuLabel">
+                    <a href="#"><img src="imagenes/gslogo.png" alt="" class="nav-icon img-fluid"></a>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <hr>
+            <div class="offcanvas-body">
+                <ul class="list-unstyled">
+                    <li><a href="" class="text-white">Inicio</a></li>
+                    <li><a href="" class="text-white">Tienda</a></li>
+                    <li><a href="" class="text-white">Foro</a></li>
+                    <li><a href="" class="text-white">Discord</a></li>
+                    <li><a href="" class="text-white">Iniciar sesión</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Menú normal en pantallas grandes -->
+        <ul class="col-lg-6 col-md-6 col-sm-8 col-xs-8 d-none d-lg-flex justify-content-around align-items-center list-unstyled m-0">
+            <li><a href="" class="text-white">Inicio</a></li>
+            <li><a href="" class="text-white">Tienda</a></li>
+            <li><a href="" class="text-white">Foro</a></li>
+            <li><a href="" class="text-white">Discord</a></li>
+        </ul>
+		<!-- Botón de iniciar sesión en pantallas grandes -->
+        <ul class="col-lg-3 d-none d-lg-flex justify-content-end align-items-center list-unstyled m-0 pe-4">
+            <li><a href="" class="text-white">Iniciar sesión</a></li>
+        </ul>
+    </div>
+</nav>
