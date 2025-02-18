@@ -5,7 +5,7 @@
     error_reporting(E_ALL);
     ini_set('display_errors', '1');
 
-    $userId = $_SESSION['id_users'];
+    // $userId = $_SESSION['id_users'];
 
     $imagePath = $_SERVER['DOCUMENT_ROOT'] . '/imagenes/gslogo.png';
 
@@ -45,13 +45,13 @@
 </head>
 <body>
     <?php    include_once 'navbar.php'; ?>
-    <div class="container-fluid text-center">
+    <div class="container-fluid text-center mt-4">
         <div class="row m-0">
             <div class="col-lg-2 col-sm-12">
-                <div class="border mt-3">
-                    <div>
+                <div class="border mt-3 rounded">
+                    <div class="">
                         <h5 class="text-center border text-black m-0 p-1">Shakewell Outlawz</h5>
-                        <img src="../imagenes/skins/2.png" alt="Avatar" class="profile-img">
+                        <img src="../imagenes/skins/2.png" alt="Avatar" class="profile-img rounded">
                     </div>
                 </div>
                 <div class="btn w-100 border mt-2">
@@ -76,34 +76,36 @@
                 </div>
             </div>
             <div class="col-lg-10 col-sm-12 mt-3">
-                <div class="row">
-                    <div class="col-sm-12 pb-2">
+                <div class="row d-flex justify-content-between mb-2">
+                    <div class="col-sm-12 col-lg-3 pb-2">
                         <div class="card">
-                            <a class="btn" href="">Información</a>
+                            <a class="btn btn-perfil" href="">Información</a>
                         </div>
                     </div>
-                    <div class="col-sm-12 pb-2">
+                    <div class="col-sm-12 col-lg-3 pb-2">
                         <div class="card">
-                            <a class="btn" href="">Vehiculos</a>
+                            <a class="btn btn-perfil" href="">Vehiculos</a>
                         </div>
                     </div>
-                    <div class="col-sm-12 pb-2">
+                    <div class="col-sm-12 col-lg-3 pb-2">
                         <div class="card">
-                            <a class="btn" href="">Información</a>
+                            <a class="btn btn-perfil" href="">Información</a>
                         </div>        
                     </div>
-                    <div class="col-sm-12 pb-2">
+                    <div class="col-sm-12 col-lg-3 pb-2">
                         <div class="card">
-                            <a class="btn" href="">Información</a>
+                            <a class="btn btn-perfil" href="">Información</a>
                         </div>        
                     </div>
                 </div>
-            </div>
-            <div class="row mt-3 p-0 ps-4">
-                    <h3 class="mb-3 col-sm-12">Información de tu cuenta</h3>
-                    <div class="col-lg-6 col-sm-12 p-0">
+                <div class="container border shadow rounded">
+                <div class="row mt-3 d-flex ">
+                    <h3 class="mb-4 col-sm-12 col-lg-12 mt-2">Información de tu cuenta</h3>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="col-lg-6 col-sm-12">
                         <div class="d-flex flex-column">
-                            <table class="table table-bordered">
+                            <table class="table table-bordered rounded shadow-sm">
                                 <tbody>
                                     <tr>
                                         <td class=" p-0 d-flex justify-content-between text-center">
@@ -139,8 +141,8 @@
                             </table>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-sm-12 p-0">
-                        <table class="table table-bordered">
+                    <div class="col-lg-6 col-sm-12">
+                        <table class="table table-bordered shadow-sm">
                             <tbody>
                                 <tr>
                                     <td class=" p-0 d-flex justify-content-between text-center">
@@ -166,206 +168,131 @@
                                         <p class="m-0 p-1 pe-2"><strong>1</strong></p>
                                     </td>
                                 </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-3 p-0 ">
-                <h3 class="mb-3 col-sm-12">Inventario</h3>
-                <div class="col-lg-6 col-sm-12">
-                    <div class="d-flex flex-column">
-                        <table class="table table-bordered">
-                            <tbody>
                                 <tr>
                                     <td class=" p-0 d-flex justify-content-between text-center">
-                                        <p class="m-0 p-1">💊 Medicamentos:</p>
-                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class=" p-0 d-flex justify-content-between text-center">
-                                        <p class="m-0 p-1">🌿 Marihuana:</p>
-                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class=" p-0 d-flex justify-content-between text-center">
-                                        <p class="m-0 p-1">⚙️ Piezas:</p>
-                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class=" p-0 d-flex justify-content-between text-center">
-                                        <p class="m-0 p-1">📦 Materiales:</p>
-                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class=" p-0 d-flex justify-content-between text-center">
-                                        <p class="m-0 p-1">💉 Botiquines:</p>
-                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class=" p-0 d-flex justify-content-between text-center">
-                                        <p class="m-0 p-1">🌱 Semillas:</p>
-                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class=" p-0 d-flex justify-content-between text-center">
-                                        <p class="m-0 p-1">🎙️ Radio:</p>
-                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class=" p-0 d-flex justify-content-between text-center">
-                                        <p class="m-0 p-1">🪛 Destornillador:</p>
-                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                        <p class="m-0 p-1">🛡️ Skin:</p>
+                                        <p class="m-0 p-1 pe-2"><strong>1</strong></p>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <div class="col-lg-6 col-sm-12">
-                    <div class="d-flex flex-column">
-                        <table class="table table-bordered">
-                            <tbody>
-                                <tr>
-                                    <td class=" p-0 d-flex justify-content-between text-center">
-                                        <p class="m-0 p-1"><img src="..\imagenes\iconos\armas\Weapon-4.gif" alt=""> Arma blanca:</p>
-                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class=" p-0 d-flex justify-content-between text-center">
-                                        <p class="m-0 p-1"><img src="..\imagenes\iconos\armas\Weapon-24.gif" alt=""> Pistola:</p>
-                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class=" p-0 d-flex justify-content-between text-center">
-                                        <p class="m-0 p-1"><img src="..\imagenes\iconos\armas\Weapon-27.gif" alt=""> Escopeta:</p>
-                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class=" p-0 d-flex justify-content-between text-center">
-                                        <p class="m-0 p-1"><img src="..\imagenes\iconos\armas\Weapon-29.gif" alt=""> Subfusil:</p>
-                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class=" p-0 d-flex justify-content-between text-center">
-                                        <p class="m-0 p-1"><img src="..\imagenes\iconos\armas\Weapon-31.gif" alt=""> Fusil de asalto:</p>
-                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class=" p-0 d-flex justify-content-between text-center">
-                                        <p class="m-0 p-1"><img src="..\imagenes\iconos\armas\Weapon-33.gif" alt=""> Rifle:</p>
-                                        <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="row mt-1 d-flex">
+                    <h3 class="mb-4 col-sm-12 col-lg-12 mt-2">Inventario</h3>
                 </div>
-                <div class="container my-5">
-                    <!-- Carrusel -->
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active d-flex justify-content-center">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="..\imagenes\vehi\400.png" class="card-img-top" alt="Imagen 1">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Sadler</h5>
-                                        <p class="card-text">Auto pa la ganga</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item d-flex justify-content-center">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="..\imagenes\vehi\401.png" class="card-img-top" alt="Imagen 2">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Categoría 2</h5>
-                                        <p class="card-text">Descripción de la categoría 2.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item d-flex justify-content-center">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="..\imagenes\vehi\401.png" class="card-img-top" alt="Imagen 3">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Categoría 3</h5>
-                                        <p class="card-text">Descripción de la categoría 3.</p>
-                                    </div>
-                                </div>
+                <div class="row d-flex justify-content-between">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="d-flex flex-column">
+                            <table class="table table-bordered shadow-sm">
+                                <tbody>
+                                    <tr>
+                                        <td class=" p-0 d-flex justify-content-between text-center">
+                                            <p class="m-0 p-1">💊 Medicamentos:</p>
+                                            <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=" p-0 d-flex justify-content-between text-center">
+                                            <p class="m-0 p-1">🌿 Marihuana:</p>
+                                            <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=" p-0 d-flex justify-content-between text-center">
+                                            <p class="m-0 p-1">⚙️ Piezas:</p>
+                                            <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=" p-0 d-flex justify-content-between text-center">
+                                            <p class="m-0 p-1">📦 Materiales:</p>
+                                            <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=" p-0 d-flex justify-content-between text-center">
+                                            <p class="m-0 p-1">💉 Botiquines:</p>
+                                            <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=" p-0 d-flex justify-content-between text-center">
+                                            <p class="m-0 p-1">🌱 Semillas:</p>
+                                            <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=" p-0 d-flex justify-content-between text-center">
+                                            <p class="m-0 p-1">🎙️ Radio:</p>
+                                            <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=" p-0 d-flex justify-content-between text-center">
+                                            <p class="m-0 p-1">🪛 Destornillador:</p>
+                                            <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="d-flex flex-column">
+                                <table class="table table-bordered shadow-sm">
+                                    <tbody>
+                                        <tr>
+                                            <td class=" p-0 d-flex justify-content-between text-center">
+                                                <p class="m-0 p-1"><img src="..\imagenes\iconos\armas\Weapon-4.gif" alt=""> Arma blanca:</p>
+                                                <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class=" p-0 d-flex justify-content-between text-center">
+                                                <p class="m-0 p-1"><img src="..\imagenes\iconos\armas\Weapon-24.gif" alt=""> Pistola:</p>
+                                                <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class=" p-0 d-flex justify-content-between text-center">
+                                                <p class="m-0 p-1"><img src="..\imagenes\iconos\armas\Weapon-27.gif" alt=""> Escopeta:</p>
+                                                <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class=" p-0 d-flex justify-content-between text-center">
+                                                <p class="m-0 p-1"><img src="..\imagenes\iconos\armas\Weapon-29.gif" alt=""> Subfusil:</p>
+                                                <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class=" p-0 d-flex justify-content-between text-center">
+                                                <p class="m-0 p-1"><img src="..\imagenes\iconos\armas\Weapon-31.gif" alt=""> Fusil de asalto:</p>
+                                                <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class=" p-0 d-flex justify-content-between text-center">
+                                                <p class="m-0 p-1"><img src="..\imagenes\iconos\armas\Weapon-33.gif" alt=""> Rifle:</p>
+                                                <p class="m-0 p-1 pe-2"><strong>3800</strong></p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                        <!-- Controles del carrusel -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
                     </div>
                 </div>
-
-    <!-- <div class="container border">
-        <div class="row border">
-            <div class="col-4 sidebar mt-3">
-                <h5 class="text-center text-black">Shakewell Outlawz</h5>
-                <hr class="text-secondary">
-                <img src="../imagenes/skins/2.png" alt="Avatar" class="profile-img">
-                <div class="menu-item">
-                    <i class="fas fa-cog"></i>
-                    <a href="#" class="text-black text-decoration-none">Configuración de cuenta</a>
-                </div>
-                <div class="menu-item">
-                    <i class="fas fa-trophy"></i>
-                    <a href="#" class="text-black text-decoration-none">Resumen y logros</a>
-                </div>
-                <div class="card-money">
-                    <span class="text-black">💰 Moneda GS</span>
-                    <span class="text-warning">3000</span>
-                </div>
-                <div class="card-money">
-                    <span class="text-black">💵 Dinero</span>
-                    <span class="badge bg-success">$686</span>
-                </div>
-                <div class="card-money">
-                    <span class="text-black">🏦 Banco</span>
-                    <span class="badge bg-primary">$0</span>
-                </div>
-                <div class="container text-center mt-3 me-1 ms-1 p-3">
             </div>
-        </div>
-            
-            
-        </div>
-        
-        
-        <div class="container text-center mt-3 me-1 ms-1 p-3">
-            <div class="row border ms-1 me-1">
-                <a class="col-3 border text-black p-1" href="">Información</a>
-                <a class="col-3 border text-black p-1" href="">Vehiculos</a>
-                <a class="col-3 border text-black p-1" href="">Información</a>
-                <a class="col-3 border text-black p-1" href="">Información</a>
-            </div>
-                    </div>
-        
-    </div> -->
+        </div>     
+    </div>        
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 
+</html>
 
 
 

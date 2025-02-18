@@ -25,6 +25,16 @@
     filter: invert(100%);
 }
 
+.btn-perfil{
+    background: white;
+    color: black;
+}
+
+.btn-perfil:hover{
+    color: orange;
+    background-color: black;
+}
+
 .nav-link{
     position: relative;
     color: #fff;
