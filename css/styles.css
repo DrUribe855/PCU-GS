@@ -5,7 +5,7 @@
 
 
 .navbar-color{
-    background: black;
+    background: #1b1b1b;
 }
 
 .nav-icon{
@@ -32,14 +32,13 @@
 
 .btn-perfil:hover{
     color: orange;
-    background-color: black;
+    background-color: #1b1b1b;
 }
 
 .nav-link{
     position: relative;
-    color: #fff;
+    color: orange;
     text-decoration: none;
-    padding-bottom: 5px;
 
 }
 

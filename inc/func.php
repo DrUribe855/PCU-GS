@@ -7,57 +7,40 @@
     }
 
     // Función para extraer información del usuario de una columna en especifíca;
-    function getUserDataById($connection, $userId, $key){
-        $sql = "SELECT $key FROM users WHERE id_users = ?";
+    function getUserData($connection, $userId){
+        $sql = "SELECT * FROM users WHERE id_users = ?";
         $stmt = mysqli_prepare($connection, $sql);
         $stmt->bind_param("i", $userId);
         $stmt->execute();
         $result = $stmt->get_result();
-
-        if($row = $result->fetch_assoc()){
-            return htmlspecialchars($row[$key]);
-        }
-
-        return null;
+        return $result->fetch_assoc() ?? [];
     }
 
-    function getPrincipalUserInformationById($connection, $userId, $key){
-        $sql = "SELECT $key FROM usuario_principal WHERE usuario_id = ?";
+    function getPrincipalUserInformation($connection, $userId){
+        $sql = "SELECT * FROM usuario_principal WHERE usuario_id = ?";
         $stmt = mysqli_prepare($connection, $sql);
         $stmt->bind_param("i", $userId);
         $stmt->execute();
         $result = $stmt->get_result();
-
-        if($row = $result->fetch_assoc()){
-            return htmlspecialchars($row[$key]);
-        }
-
-        return null;
+        return $result->fetch_assoc() ?? [];
     }
 
-    function getExtraUserInformation($connection, $userId, $key){
-        $sql = "SELECT $key FROM usuario_extra WHERE usuario_id = ?";
+    function getUserExtraInformation($connection, $userId){
+        $sql = "SELECT * FROM usuario_extra WHERE usuario_id = ?";
         $stmt = mysqli_prepare($connection, $sql);
         $stmt->bind_param("i", $userId);
         $stmt->execute();
         $result = $stmt->get_result();
-
-        if($row = $result->fetch_assoc()){
-            return htmlspecialchars($row[$key]);
-        }
-
-        return null;
+        return $result->fetch_assoc() ?? [];
     }
 
-    function getUserInventory($connection, $userId, $key){
-        $sql = "SELECT $key FROM usuario_inventario WHERE usuario_id = ?";
+    function getUserInventory($connection, $userId){
+        $sql = "SELECT * FROM usuario_inventario WHERE usuario_id = ?";
         $stmt = mysqli_prepare($connection, $sql);
         $stmt->bind_param("i", $userId);
         $stmt->execute();
         $result = $stmt->get_result();
-        if($row = $result->fetch_assoc()){
-            return htmlspecialchars($row[$key]);
-        }
+        return $result->fetch_assoc() ?? [];
     }
 
     function getUserVehicles($connection, $userId, $key){

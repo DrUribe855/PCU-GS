@@ -1,3 +1,9 @@
+<?php
+    $userId = isset($_SESSION['id_users']);
+    $userName = isset($_SESSION['nombre']);
+?>
+
+
 <nav class="navbar navbar-expand-lg container-fluid p-0 navbar-color">
     <div class="row w-100 m-0 d-flex align-items-center position-relative">
         <!-- Icono en pantallas grandes -->
@@ -21,25 +27,33 @@
             <hr>
             <div class="offcanvas-body">
                 <ul class="list-unstyled">
-                    <li><a href="" class="text-white">Inicio</a></li>
+                    <li><a href="index.php" class="text-white">Inicio</a></li>
                     <li><a href="" class="text-white">Tienda</a></li>
                     <li><a href="" class="text-white">Foro</a></li>
                     <li><a href="" class="text-white">Discord</a></li>
-                    <li><a href="inc/login.php" class="text-white">Iniciar sesión</a></li>
+                    <?php if($userId): ?>
+                        <li><a href="inc/login.php" class="text-white">Perfil</a></li>
+                    <?php else: ?>
+                        <li><a href="login.php" class="text-white">Iniciar sesión</a></li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>
         
         <!-- Menú normal en pantallas grandes -->
         <ul class="col-lg-6 col-md-6 col-sm-8 col-xs-8 d-none d-lg-flex justify-content-around align-items-center list-unstyled m-0">
-            <li><a href="" class="text-white">Inicio</a></li>
-            <li><a href="" class="text-white">Tienda</a></li>
-            <li><a href="" class="text-white">Foro</a></li>
-            <li><a href="" class="text-white">Discord</a></li>
+            <li><a href="index.php" class="text-white nav-link">Inicio</a></li>
+            <li><a href="" class="text-white nav-link">Tienda</a></li>
+            <li><a href="" class="text-white nav-link">Foro</a></li>
+            <li><a href="" class="text-white nav-link">Discord</a></li>
         </ul>
 		<!-- Botón de iniciar sesión en pantallas grandes -->
         <ul class="col-lg-3 d-none d-lg-flex justify-content-end align-items-center list-unstyled m-0 pe-4">
-            <li><a href="inc/login.php" class="text-white">Iniciar sesión</a></li>
+            <?php if($userId): ?>
+                <li><a href="pag\perfil.php" class="text-white">Perfil</a></li>
+            <?php else: ?>
+                <li><a href="login.php" class="text-white">Iniciar sesión</a></li>
+            <?php endif; ?>
         </ul>
     </div>
 </nav>
