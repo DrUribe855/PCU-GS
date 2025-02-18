@@ -6,7 +6,7 @@
         echo $totalUsers['total'];
     }
 
-    // Función para extraer información del usuario de una columna en especifíca;
+    /* Función para extracción de datos de usuarios de la tabla users */
     function getUserData($connection, $userId){
         $sql = "SELECT * FROM users WHERE id_users = ?";
         $stmt = mysqli_prepare($connection, $sql);
@@ -15,6 +15,8 @@
         $result = $stmt->get_result();
         return $result->fetch_assoc() ?? [];
     }
+
+    /* Función para extracción de datos de usuarios de la tabla usuario_principal */
 
     function getPrincipalUserInformation($connection, $userId){
         $sql = "SELECT * FROM usuario_principal WHERE usuario_id = ?";
@@ -25,6 +27,8 @@
         return $result->fetch_assoc() ?? [];
     }
 
+    /* Función para extracción de datos de usuarios de la tabla de usuario_extra */
+
     function getUserExtraInformation($connection, $userId){
         $sql = "SELECT * FROM usuario_extra WHERE usuario_id = ?";
         $stmt = mysqli_prepare($connection, $sql);
@@ -34,6 +38,8 @@
         return $result->fetch_assoc() ?? [];
     }
 
+    /* Función para extracción de datos de usuarios de la tabla de usuario_inventario */
+
     function getUserInventory($connection, $userId){
         $sql = "SELECT * FROM usuario_inventario WHERE usuario_id = ?";
         $stmt = mysqli_prepare($connection, $sql);
@@ -42,6 +48,8 @@
         $result = $stmt->get_result();
         return $result->fetch_assoc() ?? [];
     }
+
+    /* Función para extracción de datos de la tabla vehiculos */
 
     function getUserVehicles($connection, $userId, $key){
         $sql = "SELECT $key FROM vehiculos WHERE prop_id = ?";

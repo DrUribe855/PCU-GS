@@ -17,13 +17,19 @@
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 	</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <?php	include_once 'inc/navbar.php'; ?>
-    <?php   include_once 'inc/carrusel.php'; ?>
+    <?php include_once 'inc/navbar.php'; ?>
+    <?php include_once 'inc/carrusel.php'; ?>
+    <section class="container-fluid border">
+        <div class="row border p-2">
+            <strong class="p-0">IP: XXXXXXXXXXXXXXXXX</strong>
+        </div>
+    </section>
 
 
 
