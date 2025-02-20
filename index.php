@@ -25,11 +25,14 @@
 
     <?php include_once 'inc/navbar.php'; ?>
     <?php include_once 'inc/carrusel.php'; ?>
-    <section class="container-fluid border">
-        <div class="row border p-2">
-            <strong class="p-0">IP: XXXXXXXXXXXXXXXXX</strong>
+    <section class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-3">
+                <iframe src="https://discord.com/widget?id=990060352957988884&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
         </div>
     </section>
+    
 
 
 

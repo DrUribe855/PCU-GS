@@ -32,9 +32,10 @@
                     <li><a href="" class="text-white"><i class="fa-solid fa-newspaper p-2"></i>Foro</a></li>
                     <li><a href="" class="text-white"><i class="fa-brands fa-discord p-2"></i>Discord</a></li>
                     <?php if($userId): ?>
-                        <li><a href="inc/login.php" class="text-white"><i class="fa-solid fa-user p-2"></i>Perfil</a></li>
+                        <li><a href="pag/perfil.php" class="text-white"><i class="fa-solid fa-user p-2"></i>Perfil</a></li>
+                        <li><a href="inc/logout.php" class="text-white"><i class="fa-solid fa-person-running p-2"></i> Salir</a></li>
                     <?php else: ?>
-                        <li><a href="login.php" class="text-white"><i class="fa-solid fa-right-to-bracket p-2"></i>Iniciar sesión</a></li>
+                        <li><a href="inc/login.php" class="text-white"><i class="fa-solid fa-right-to-bracket p-2"></i>Iniciar sesión</a></li>
                     <?php endif; ?>
                 </ul>
             </div>
@@ -42,17 +43,17 @@
         
         <!-- Menú normal en pantallas grandes -->
         <ul class="col-lg-6 col-md-6 col-sm-8 col-xs-8 d-none d-lg-flex justify-content-around align-items-center list-unstyled m-0">
-            <li><a href="index.php" class="text-white nav-link"><i class="fa-solid fa-house p-2"></i>Inicio</a></li>
-            <li><a href="" class="text-white nav-link"><i class="fa-solid fa-shop p-2"></i>Tienda</a></li>
-            <li><a href="" class="text-white nav-link"><i class="fa-solid fa-newspaper p-2"></i>Foro</a></li>
-            <li><a href="" class="text-white nav-link"><i class="fa-brands fa-discord p-2"></i>Discord</a></li>
+            <li><a href="index.php" class="text-white nav-link"><i class="fa-solid fa-house p-0 pe-2"></i>Inicio</a></li>
+            <li><a href="" class="text-white nav-link"><i class="fa-solid fa-shop p-0 pe-2"></i>Tienda</a></li>
+            <li><a href="" class="text-white nav-link"><i class="fa-solid fa-newspaper p-0 pe-2"></i>Foro</a></li>
+            <li><a href="" class="text-white nav-link"><i class="fa-brands fa-discord p-0 pe-2"></i>Discord</a></li>
         </ul>
 		<!-- Botón de iniciar sesión en pantallas grandes -->
         <ul class="col-lg-3 d-none d-lg-flex justify-content-end align-items-center list-unstyled m-0 pe-4">
             <?php if($userId): ?>
-                <li><a href="pag\perfil.php" class="text-white"><i class="fa-solid fa-user p-2"></i>Perfil</a></li>
+                <li><a href="pag\perfil.php" class="text-white"><i class="fa-solid fa-user p-0 pe-2"></i>Perfil</a></li>
             <?php else: ?>
-                <li><a href="login.php" class="text-white"><i class="fa-solid fa-right-to-bracket p-2"></i>Iniciar sesión</a></li>
+                <li><a href="inc/login.php" class="text-white"><i class="fa-solid fa-right-to-bracket p-0 pe-2"></i>Iniciar sesión</a></li>
             <?php endif; ?>
         </ul>
     </div>

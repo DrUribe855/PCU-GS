@@ -6,6 +6,9 @@
     ini_set('display_errors', '1');
 
     $userId = isset($_SESSION['id_users']);
+    if(empty($userId)) {
+        header('Location: ../index.php');
+    }
 
     function moneyFormat($number, $fractional = false) {
         $decimals = $fractional ? 2 : 0;  
@@ -34,7 +37,7 @@
 </head>
 <body>
     <?php    include_once 'navbar.php'; ?>
-    <div class="container-fluid text-center mt-4">
+    <div class="container-fluid text-center mt-4 container-image" >
         <div class="row m-0">
             <div class="col-lg-2 col-sm-12">
                 <div class="border mt-3 rounded">

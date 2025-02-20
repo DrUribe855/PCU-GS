@@ -1,11 +1,19 @@
 *{
     @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
     font-family: 'Figtree', sans-serif;
+    
 }
 
 
 .navbar-color{
     background: #1b1b1b;
+}
+
+.container-image{
+    background-image: url('../img/bg-repeat.png');
+    background-size: cover;  /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: center;  /* Centra la imagen */
+    background-repeat: no-repeat;
 }
 
 .nav-icon{
@@ -93,6 +101,10 @@
 body a{
     text-decoration: none;
     color: white;
+}
+
+body{
+    
 }
 
 body ul{
