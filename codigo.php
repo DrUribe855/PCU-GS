@@ -230,3 +230,52 @@
         </div>
     </div>
 </div>
+<div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card mt-5">
+                        <div class="card-header text-center">
+                            <h3>Iniciar sesión</h3>
+                        </div>
+                        <div class="card-body">
+                        <?php if(isset($_SESSION['error'])): ?>
+                            <script>
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Error',
+                                    text: '<?php echo $_SESSION['error']; ?>'
+                                }).then(() => {
+                                    window.location.href = 'login.php'; // Redirige después de cerrar la alerta
+                                });
+                            </script>
+                            <?php unset($_SESSION['error']); ?>
+                        <?php endif; ?>
+                        <?php if(isset($_SESSION['success'])): ?>
+                            <script>
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: 'Éxito',
+                                    text: '<?php echo $_SESSION['success']; ?>'
+                                });
+                            </script>
+                            <?php unset($_SESSION['success']); ?>
+                        <?php endif; ?>
+                            <form action="" method="POST">
+                                <div class="form-group">
+                                    <label for="username">Usuario</label>
+                                    <input type="text" name="username" id="username" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Contraseña</label>
+                                    <input type="password" name="password" id="password" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
+                            </form>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small>&copy; Powered by Golden State Roleplay</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

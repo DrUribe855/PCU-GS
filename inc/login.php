@@ -61,12 +61,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/styles.css">
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <title>Iniciar sesión</title>
     </head>
-    <body>
+    <body class="background">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row d-flex justify-content-center">
                 <div class="col-md-6">
                     <div class="card mt-5">
                         <div class="card-header text-center">
@@ -119,4 +120,3 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
     </html>
-?>
