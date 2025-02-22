@@ -51,15 +51,18 @@
 
     /* Función para extracción de datos de la tabla vehiculos */
 
-    function getUserVehicles($connection, $userId, $key){
-        $sql = "SELECT $key FROM vehiculos WHERE prop_id = ?";
+    function getUserVehicles($connection, $userId){
+        $sql = "SELECT * FROM vehiculos WHERE prop_id = ?";
         $stmt = mysqli_prepare($connection, $sql);
         $stmt->bind_param("i", $userId);
         $stmt->execute();
         $result = $stmt->get_result();
         $vehicles = [];
         while($row = $result->fetch_assoc()){
-            $vehicles[] = $row[$key];
+            $vehicles[] = [
+                "data" => $row,
+                "modelo" => getVehicleName($row["modelo"]),
+            ];
         }
 
         return $vehicles;
@@ -87,6 +90,8 @@
         if($result->num_rows > 0){
             return true;
         }
+
+        return false;
     }
 
     function getVehicleName($vehicleid){

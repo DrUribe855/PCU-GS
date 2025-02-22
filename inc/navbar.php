@@ -51,7 +51,15 @@
 		<!-- Botón de iniciar sesión en pantallas grandes -->
         <ul class="col-lg-3 d-none d-lg-flex justify-content-end align-items-center list-unstyled m-0 pe-4">
             <?php if($userId): ?>
-                <li><a href="pag\perfil.php" class="text-white"><i class="fa-solid fa-user p-0 pe-2"></i>Perfil</a></li>
+                <div class="dropdown col-lg-3 d-none d-lg-flex justify-content-end align-items-center pe-4">
+                    <button class="btn dropdown-toggle text-white" type="button" data-bs-toggle="dropdown">
+                        Opciones
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a href="pag/perfil.php" class="dropdown-item"><i class="fa-solid fa-user p-0 pe-2"></i> Perfil</a></li>
+                        <li><a href="../inc/logout.php" class="dropdown-item"><i class="fa-solid fa-person-running pe-2"></i> Salir</a></li>
+                    </ul>
+                </div>
             <?php else: ?>
                 <li><a href="inc/login.php" class="text-white"><i class="fa-solid fa-right-to-bracket p-0 pe-2"></i>Iniciar sesión</a></li>
             <?php endif; ?>
