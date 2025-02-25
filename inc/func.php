@@ -1,10 +1,10 @@
 <?php
     include("config.php");
-    function totalUsers($connection){
-        $connectedUsers = mysqli_query($connection, "SELECT COUNT(*) AS total FROM users WHERE conectado = 1");
-        $totalUsers = mysqli_fetch_array($connectedUsers);
-        echo $totalUsers['total'];
-    }
+    // function totalUsers($connection){
+    //     $connectedUsers = mysqli_query($connection, "SELECT COUNT(*) AS total FROM users WHERE conectado = 1");
+    //     $totalUsers = mysqli_fetch_array($connectedUsers);
+    //     echo $totalUsers['total'];
+    // }
 
     /* Función para extracción de datos de usuarios de la tabla users */
     function getUserData($connection, $userId){

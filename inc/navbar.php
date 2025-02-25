@@ -30,7 +30,7 @@
                     <li><a href="index.php" class="text-white"><i class="fa-solid fa-house p-2"></i>Inicio</a></li>
                     <li><a href="" class="text-white"><i class="fa-solid fa-shop p-2"></i>Tienda</a></li>
                     <li><a href="" class="text-white"><i class="fa-solid fa-newspaper p-2"></i>Foro</a></li>
-                    <li><a href="" class="text-white"><i class="fa-brands fa-discord p-2"></i>Discord</a></li>
+                    <li><a href="https://discord.gg/Eus5D5779H" class="text-white"><i class="fa-brands fa-discord p-2"></i>Discord</a></li>
                     <?php if($userId): ?>
                         <li><a href="pag/perfil.php" class="text-white"><i class="fa-solid fa-user p-2"></i>Perfil</a></li>
                         <li><a href="inc/logout.php" class="text-white"><i class="fa-solid fa-person-running p-2"></i> Salir</a></li>
@@ -46,7 +46,7 @@
             <li><a href="index.php" class="text-white nav-link"><i class="fa-solid fa-house p-0 pe-2"></i>Inicio</a></li>
             <li><a href="" class="text-white nav-link"><i class="fa-solid fa-shop p-0 pe-2"></i>Tienda</a></li>
             <li><a href="" class="text-white nav-link"><i class="fa-solid fa-newspaper p-0 pe-2"></i>Foro</a></li>
-            <li><a href="" class="text-white nav-link"><i class="fa-brands fa-discord p-0 pe-2"></i>Discord</a></li>
+            <li><a href="https://discord.gg/Eus5D5779H" class="text-white nav-link"><i class="fa-brands fa-discord p-0 pe-2"></i>Discord</a></li>
         </ul>
 		<!-- Botón de iniciar sesión en pantallas grandes -->
         <ul class="col-lg-3 d-none d-lg-flex justify-content-end align-items-center list-unstyled m-0 pe-4">
@@ -57,7 +57,7 @@
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li><a href="pag/perfil.php" class="dropdown-item"><i class="fa-solid fa-user p-0 pe-2"></i> Perfil</a></li>
-                        <li><a href="../inc/logout.php" class="dropdown-item"><i class="fa-solid fa-person-running pe-2"></i> Salir</a></li>
+                        <li><a href="inc/logout.php" class="dropdown-item"><i class="fa-solid fa-person-running pe-2"></i> Salir</a></li>
                     </ul>
                 </div>
             <?php else: ?>
