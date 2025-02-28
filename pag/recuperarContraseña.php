@@ -4,21 +4,6 @@
     session_start();  
     include '../inc/config.php';
     include '../inc/func.php';
-
-
-    
-    
-    
-
-    
-
-
-    // if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    //     logIn($connection, $_POST['username'], $_POST['password']);
-    // }
-
-    
-
 ?>
     <!DOCTYPE html>
     <html lang="en">

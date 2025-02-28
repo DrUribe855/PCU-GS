@@ -31,15 +31,20 @@
     }
 
     function validatePassword($connection, $username, $password){
-        $sql = 'SELECT id_users, nombre, password FROM users WHERE nombre = ?';
+        $sql = 'SELECT id_users, nombre, password, salt FROM users WHERE nombre = ?';
         $stmt = mysqli_prepare($connection, $sql);
         $stmt->bind_param("s", $username);
         $stmt->execute();
         $result = $stmt->get_result();
         $user = $result->fetch_assoc();
-        // $password = 'password';
-        echo hash('sha256', $password);
-        if( hash('sha256',$password) == $user['password']){
+
+        echo $user["username"];
+        echo $user["nombre"];
+        var_dump($user["id_users"]);
+
+        $hashedInput = hash('sha256', $user['salt'] . $password);
+    
+        if( $hashedInput === $user['password']){
             $_SESSION['nombre'] = $user['nombre'];
             $_SESSION['id_users'] = $user['id_users'];
             return true;
@@ -89,7 +94,7 @@
                 </div>
                 <div class="btn">
                 <button class="button1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ingresar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                <button class="button2">Registrarse</button>
+                <button class="button2"><a href="../pag/crearCuenta.php">Registrarse</a></button>
                 </div>
                 <button class="button3"><a href="../pag/recuperarContraseña.php">Recuperar contraseña</a> </button>
             </form>

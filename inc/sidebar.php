@@ -18,36 +18,36 @@
 			<div class="avatarperfil">
 				<img src="<?= getUserAvatar($connection, $userId) ?>" alt="skin" style="max-width:155px;max-height:155px; z-index:5; border: solid 1px #7C7C7C;" class="b3noabajo">
 				<div class="nombreest">
-					<?php if(getPrincipalUserInformationById($connection, $userId, 'vip') == 0) : ?>
+					<?php if(getPrincipalUserInformation($connection, $userId, 'vip') == 0) : ?>
 						<span class="marcovip bord3">No VIP</span>
-					<?php elseif(getPrincipalUserInformationById( $connection, $userId,'vip') == 1) : ?>
+					<?php elseif(getPrincipalUserInformation( $connection, $userId,'vip') == 1) : ?>
 						<span class="marcovip bord3"><b>VIP BRONCE</b></span>
-					<?php elseif(getPrincipalUserInformationById( $connection, $userId,'vip') == 2) : ?>
+					<?php elseif(getPrincipalUserInformation( $connection, $userId,'vip') == 2) : ?>
 						<span class="marcovip bord3"><b>VIP PLATA</b></span>
-					<?php elseif(getPrincipalUserInformationById( $connection, $userId,'vip') == 3) : ?>
+					<?php elseif(getPrincipalUserInformation( $connection, $userId,'vip') == 3) : ?>
 						<span class="marcovip bord3"><b>VIP GOLD</b></span>
 					<?php endif ?>
 				</div>
 			</div>
 			<div class="marcotexto2">
 				<div class="marcotexto">';
-					<?php $nivel = getPrincipalUserInformationById($connection, $userId,'nivel');
-					if($nivel == 1): ?> <b>Puntos de respeto: <?= getPrincipalUserInformationById($connection, $userId, 'experiencia') ?>/ 7</b>
-					<?php elseif($nivel == 2): ?> <<b>Puntos de respeto: <? getPrincipalUserInformationById($connection, $userId, 'experiencia') ?> / 7</b>
-					<?php elseif($nivel == 2): ?><b>Puntos de respeto: <?= getPrincipalUserInformationById($connection, $userId, 'experiencia') ?> / 12</b>
-					<?php elseif($nivel == 3): ?><b>Puntos de respeto: <?= getPrincipalUserInformationById($connection, $userId, 'experiencia') ?> / 19</b>
-					<?php elseif($nivel == 4): ?><b>Puntos de respeto: <?= getPrincipalUserInformationById($connection, $userId, 'experiencia') ?> / 31</b>
-					<?php elseif($nivel == 5): ?><b>Puntos de respeto: <?= getPrincipalUserInformationById($connection, $userId, 'experiencia') ?> / 52</b>
-					<?php elseif($nivel == 6): ?><b>Puntos de respeto: <?= getPrincipalUserInformationById($connection, $userId, 'experiencia') ?> / 86</b>
-					<?php elseif($nivel == 7): ?><b>Puntos de respeto: <?= getPrincipalUserInformationById($connection, $userId, 'experiencia') ?> / 143</b>
-					<?php elseif($nivel == 8): ?><b>Puntos de respeto: <?= getPrincipalUserInformationById($connection, $userId, 'experiencia') ?> / 239</b>
-					<?php elseif($nivel == 9): ?><b>Puntos de respeto: <?= getPrincipalUserInformationById($connection, $userId, 'experiencia') ?> / 397</b>
-					<?php elseif($nivel == 10): ?><b>Puntos de respeto: <?= getPrincipalUserInformationById($connection, $userId, 'experiencia') ?> / 662</b>
-					<?php elseif($nivel == 11): ?><b>Puntos de respeto: <?= getPrincipalUserInformationById($connection, $userId, 'experiencia') ?> / 846</b>
-					<?php elseif($nivel == 12): ?><b>Puntos de respeto: <?= getPrincipalUserInformationById($connection, $userId, 'experiencia') ?> / 1044</b>
-					<?php elseif($nivel == 13): ?><b>Puntos de respeto: <?= getPrincipalUserInformationById($connection, $userId, 'experiencia') ?> / 1259</b>
-					<?php elseif($nivel == 14): ?><b>Puntos de respeto: <?= getPrincipalUserInformationById($connection, $userId, 'experiencia') ?> / 1427</b>
-					<?php elseif($nivel == 15): ?><b>Puntos de respeto: <?= getPrincipalUserInformationById($connection, $userId, 'experiencia') ?> / 1654</b>
+					<?php $nivel = getPrincipalUserInformation($connection, $userId,'nivel');
+					if($nivel == 1): ?> <b>Puntos de respeto: <?= getPrincipalUserInformation($connection, $userId, 'experiencia') ?>/ 7</b>
+					<?php elseif($nivel == 2): ?> <<b>Puntos de respeto: <? getPrincipalUserInformation($connection, $userId, 'experiencia') ?> / 7</b>
+					<?php elseif($nivel == 2): ?><b>Puntos de respeto: <?= getPrincipalUserInformation($connection, $userId, 'experiencia') ?> / 12</b>
+					<?php elseif($nivel == 3): ?><b>Puntos de respeto: <?= getPrincipalUserInformation($connection, $userId, 'experiencia') ?> / 19</b>
+					<?php elseif($nivel == 4): ?><b>Puntos de respeto: <?= getPrincipalUserInformation($connection, $userId, 'experiencia') ?> / 31</b>
+					<?php elseif($nivel == 5): ?><b>Puntos de respeto: <?= getPrincipalUserInformation($connection, $userId, 'experiencia') ?> / 52</b>
+					<?php elseif($nivel == 6): ?><b>Puntos de respeto: <?= getPrincipalUserInformation($connection, $userId, 'experiencia') ?> / 86</b>
+					<?php elseif($nivel == 7): ?><b>Puntos de respeto: <?= getPrincipalUserInformation($connection, $userId, 'experiencia') ?> / 143</b>
+					<?php elseif($nivel == 8): ?><b>Puntos de respeto: <?= getPrincipalUserInformation($connection, $userId, 'experiencia') ?> / 239</b>
+					<?php elseif($nivel == 9): ?><b>Puntos de respeto: <?= getPrincipalUserInformation($connection, $userId, 'experiencia') ?> / 397</b>
+					<?php elseif($nivel == 10): ?><b>Puntos de respeto: <?= getPrincipalUserInformation($connection, $userId, 'experiencia') ?> / 662</b>
+					<?php elseif($nivel == 11): ?><b>Puntos de respeto: <?= getPrincipalUserInformation($connection, $userId, 'experiencia') ?> / 846</b>
+					<?php elseif($nivel == 12): ?><b>Puntos de respeto: <?= getPrincipalUserInformation($connection, $userId, 'experiencia') ?> / 1044</b>
+					<?php elseif($nivel == 13): ?><b>Puntos de respeto: <?= getPrincipalUserInformation($connection, $userId, 'experiencia') ?> / 1259</b>
+					<?php elseif($nivel == 14): ?><b>Puntos de respeto: <?= getPrincipalUserInformation($connection, $userId, 'experiencia') ?> / 1427</b>
+					<?php elseif($nivel == 15): ?><b>Puntos de respeto: <?= getPrincipalUserInformation($connection, $userId, 'experiencia') ?> / 1654</b>
 					<?php endif ?>
 					
 					<div class="progress progress-striped progress-blue active">

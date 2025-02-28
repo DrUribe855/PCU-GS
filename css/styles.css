@@ -202,7 +202,7 @@ body ul{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5em;
+    gap: 0.1em;
     border-radius: 25px;
     padding: 0.6em;
     border: none;
@@ -210,6 +210,7 @@ body ul{
     color: white;
     background-color: #171717;
     box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    width: 100%;
   }
   
   .input-icon {
@@ -282,4 +283,41 @@ body ul{
   .button3:hover {
     background-color: orange;
     color: black;
+  }
+
+  .form-register {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2em;
+    background-color: #171717;
+    border-radius: 25px;
+    transition: .4s ease-in-out;
+    max-width: 600px; /* Limita el ancho del formulario */
+    width: 100%;
+  }
+
+  .create-user-button{
+    margin-bottom: 3em;
+    padding: 0.5em;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #252525;
+    color: white;
+  }
+
+  .create-user-button a{
+    text-decoration: none;
+  }
+
+  /* .create-user-button a:hover, a:visited, a:active{
+    color: white;
+  } */
+
+  .create-user-button:hover{
+    background-color: orange;
+    color: white;
   }

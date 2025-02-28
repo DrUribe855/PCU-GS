@@ -5,10 +5,12 @@
     error_reporting(E_ALL);
     ini_set('display_errors', '1');
 
-    $userId = isset($_SESSION['id_users']);
+    $userId = $_SESSION['id_users'];
     if(empty($userId)) {
         header('Location: ../index.php');
     }
+
+    // echo $userId;
 
     function moneyFormat($number, $fractional = false) {
         $decimals = $fractional ? 2 : 0;  
